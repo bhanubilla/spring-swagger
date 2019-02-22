@@ -19,6 +19,7 @@ public class BookConfig {
 				.paths(regex("/book.*")).build();
 	}
 
+	
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("Book Service")
 				.description("Sample Documentation Generateed Using SWAGGER2 for our Book Rest API")
