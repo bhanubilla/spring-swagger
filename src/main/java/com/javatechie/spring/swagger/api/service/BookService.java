@@ -11,7 +11,7 @@ import com.javatechie.spring.swagger.api.model.Book;
 @Service
 public class BookService {
 	@Autowired
-	private BookRepository repository;
+	BookRepository repository;
 
 	public String saveBook(Book book) {
 		repository.save(book);
@@ -19,11 +19,11 @@ public class BookService {
 	}
 
 	public Book getBook(int bookId) {
-		return repository.findOne(bookId);
+		return repository.getReferenceById(bookId);
 	}
 
 	public List<Book> removeBook(int bookId) {
-		repository.delete(bookId);
+		repository.deleteById(bookId);
 		return repository.findAll();
 	}
 }

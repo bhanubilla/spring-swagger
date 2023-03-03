@@ -16,15 +16,14 @@ import com.javatechie.spring.swagger.api.service.BookService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
 
 @RestController
 @RequestMapping("/book")
-@Api(value = "Book Service", description = "My Book Store")
+@Api(value = "Book Service")
 public class BookController {
 
 	@Autowired
-	private BookService service;
+	BookService service;
 
 	@PostMapping("/save")
 	@ApiOperation(value = "store book api")
